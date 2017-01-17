@@ -18,10 +18,11 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link type="image/x-icon" href="/favicon.ico" rel="icon" />
 	<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css?ver=161027">
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="css/user_config.css">
 	<script src="js/modernizr.min.js"></script>
+	<script src="js/smartlook.js"></script>
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,700,400&subset=latin,latin-ext'>
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.min.js" type="text/javascript"></script>
@@ -55,7 +56,10 @@
 	<li><div class="navigation-icon"><span class="icon-list2"></span></div></li>
 </ul>
 
-<a href="http://blog.nevcan.com/"><div class="btn-blog">Blog</div></a>
+<!-- Blog Section -->
+<a href="http://blog.nevcan.com/" class="hidden"><div class="btn-blog">Blog</div></a>
+<a href="https://medium.com/@nevcanuludas" target="_blank"><div class="btn-blog2">medium.com</div></a>
+<!-- # Blog Section -->
 
 <!-- Portrait with Description -->
 <aside class="portrait">
@@ -64,7 +68,7 @@
 	</div>
 	<div class="portrait__description">
 		<h1 class="portrait__description__name" style="line-height:1em;">Nevcan Uludaş</h1>
-        <center>
+        <center> <!-- height: 491px;'den küçükse hidden -->
             <a href="http://neptunsualti.com" target="_blank"><img src="http://neptunsualti.com/images/neptun-icon-white.png" width="60" alt=""/></a>
         </center>
 		<h2 class="portrait__description__title">
@@ -97,6 +101,7 @@
 		<li><a target="_blank" href="https://twitter.com/nevcanuludas"><span class="icon-twitter2"></span></a></li>
 		<!--
 		<li><a target="_blank" href="https://facebook.com/nevcanuludas"><span class="icon-facebook"></span></a></li>
+		<li><a target="_blank" href="https://medium.com/@nevcanuludas"><span class="icon-medium"></span></a></li>
 		<li><a target="_blank" href="http://nevcanuludas.tumblr.com/"><span class="icon-tumblr2"></span></a></li>
 		-->
 	</ul>
@@ -132,7 +137,7 @@
                 <p class="ru">Now, I am the founder and the instructor at <strong><a href="http://neptunsualti.com" target="_blank" style="color: #464646;">Neptun Diving Center</a></strong>. On the other hand I realize worldwide education programs for protecting underwater and supporting exploration venture. Also I have been included in many different underwater exploration projects.</p>
                 <p class="es">Now, I am the founder and the instructor at <strong><a href="http://neptunsualti.com" target="_blank" style="color: #464646;">Neptun Diving Center</a></strong>. On the other hand I realize worldwide education programs for protecting underwater and supporting exploration venture. Also I have been included in many different underwater exploration projects.</p>
                 <p class="de">Now, I am the founder and the instructor at <strong><a href="http://neptunsualti.com" target="_blank" style="color: #464646;">Neptun Diving Center</a></strong>. On the other hand I realize worldwide education programs for protecting underwater and supporting exploration venture. Also I have been included in many different underwater exploration projects.</p>
-				<p class="tr">Kulüplerimde <strong>Sportif Dalış</strong> (SCUBA), <strong>Serbest Dalış</strong> (Freediving) ve engelli arkadaşlarımız için özel dalış eğitimleri veriyorum. Ayrıca bireysel olarak teknik derin dalışlarla, <span title="Nitrox, Heliox, Trimix, Hydrox">karışım gazlarla</span>, kapalı devre rebreather'larla (CCR) ve gerçek tutkum olan mağara dalışlarıyla fazlasıyla ilgileniyorum.​</p>
+				<p class="tr">Kulüplerimde <strong>Sportif Dalış</strong> (SCUBA), <strong>Serbest Dalış</strong> (Freediving) ve engelli arkadaşlarımız için özel dalış eğitimleri veriyorum. Ayrıca bireysel olarak teknik derin dalışlarla, <span title="Nitrox, Heliox, Trimix, Hydrox">karışım gazlarla</span>, kapalı devre rebreather'larla (CCR) ve gerçek tutkum olan mağara dalışlarıyla fazlasıyla yakından ilgileniyorum.​</p>
 				<p class="en">I give dive training courses for <strong>Scuba Diving</strong>, <strong>Freediving</strong> and Handicap Diving (for disabled friends) in my clubs. Also I am individually interested in technical deep diving, <span title="Nitrox, Heliox, Trimix, Hydrox">mixture gases</span>, closed circuit rebreathers (CCR) and my actual passion cave diving.</p>
 				<p class="ru">I give dive training courses for <strong>Scuba Diving</strong>, <strong>Freediving</strong> and Handicap Diving (for disabled friends) in my clubs. Also I am individually interested in technical deep diving, <span title="Nitrox, Heliox, Trimix, Hydrox">mixture gases</span>, closed circuit rebreathers (CCR) and my actual passion cave diving.</p>
 				<p class="es">I give dive training courses for <strong>Scuba Diving</strong>, <strong>Freediving</strong> and Handicap Diving (for disabled friends) in my clubs. Also I am individually interested in technical deep diving, <span title="Nitrox, Heliox, Trimix, Hydrox">mixture gases</span>, closed circuit rebreathers (CCR) and my actual passion cave diving.</p>
@@ -154,8 +159,7 @@
                     <li><a href="http://protecdive.international" target="_blank"><img src="images/logos/protec.png" title="Professional Technical Diving"></a></li>
                     <li><a href="http://emergencyfirstresponse.com/" target="_blank"><img src="images/logos/efr.png" title="Emergency First Response"></a></li>
                     <li><a href="http://ilsf.org" target="_blank"><img src="images/logos/ilsf.png" title="International Life Saving"></a></li>
-                    <li><a href="http://tdisdi.com/tdi" target="_blank"><img src="images/logos/tdi.png" title="Technical Diving International"></a></li>
-                    <!--<li><a href="http://divessi.com/txr" target="_blank"><img src="images/logos/ssi-xr.png" title="Scuba Schools International XR"></a></li>-->
+                    <li><a href="http://divessi.com/txr" target="_blank"><img src="images/logos/ssi-xr.png" title="Scuba Schools International Extended Range"></a></li>
                     <li><a href="http://divessi.com/freediving" target="_blank"><img src="images/logos/ssi-freediving.png" title="Scuba Schools International Freediving"></a></li>
                 </ul>
 				<!-- #Recent Companies -->
@@ -298,8 +302,8 @@
 						<img src="images/sertifikalar/groups/06wL.png" width="100%" alt="GUE">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">GUE</h4>
-							<p class="portfolio__grid__item__desc__text">Fundamental Technical Diver<br />Cave 1 Diver</p>
-                            <a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class="hidden portfolio__grid__item__desc__text">Fundamental Technical Diver<br />Cave 1 Diver</p>
+                            <a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 						<div class="portfolio__detail__container">
 							<div class="portfolio__detail__desc">
@@ -328,8 +332,8 @@
 						<img src="images/sertifikalar/groups/01wL.png" width="100%" alt="TSSF/CMAS">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">TSSF/CMAS</h4>
-							<p class="portfolio__grid__item__desc__text">2&#8902; Dalış Eğitmeni<br/>Rehber Dalıcı<br/>Uzman Dalıcı</p>
-							<a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class="hidden portfolio__grid__item__desc__text">2&#8902; Dalış Eğitmeni<br/>Rehber Dalıcı<br/>Uzman Dalıcı</p>
+							<a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 						<div class="portfolio__detail__container">
 							<div class="portfolio__detail__desc">
@@ -395,8 +399,8 @@
 						<img src="images/sertifikalar/groups/04wL.png" width="100%" alt="PROTEC">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">PROTEC</h4>
-							<p class="portfolio__grid__item__desc__text">2&#8902; Dalış Eğitmeni<br />Serbest Dalış Eğitmeni<br />Engelli Dalıcı Eğitmeni<br />Uzman Dalıcı Eğitmeni</p>
-                            <a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class="hidden portfolio__grid__item__desc__text">2&#8902; Dalış Eğitmeni<br />Serbest Dalış Eğitmeni<br />Engelli Dalıcı Eğitmeni<br />Uzman Dalıcı Eğitmeni</p>
+                            <a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 
 						<div class="portfolio__detail__container">
@@ -449,8 +453,8 @@
 						<img src="images/sertifikalar/groups/05.png" width="100%" alt="EFR">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">İLKYARDIM</h4>
-							<p class="portfolio__grid__item__desc__text">EFR CPR (BLS) / First Aid-Adult<br />TSSF Temel Dalış İlkyardım Uzm.<br />STCW Temel İlkyardım Eğitimi</p>
-							<a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class=" hidden portfolio__grid__item__desc__text">EFR CPR (BLS) / First Aid-Adult<br />TSSF Temel Dalış İlkyardım Uzm.<br />STCW Temel İlkyardım Eğitimi</p>
+							<a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 						<div class="portfolio__detail__container">
 							<div class="portfolio__detail__desc">
@@ -497,8 +501,8 @@
 						<img src="images/sertifikalar/groups/03.png" width="100%" alt="ILS/TSSF">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">ILS/TSSF</h4>
-							<p class="portfolio__grid__item__desc__text">Altın Cankurtaran</p>
-                            <a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class="hidden portfolio__grid__item__desc__text">Altın Cankurtaran</p>
+                            <a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 						<div class="portfolio__detail__container">
 							<div class="portfolio__detail__desc">
@@ -520,45 +524,66 @@
 						<img src="images/sertifikalar/groups/07.png" width="100%" alt="Diğer Belgeler">
 						<div class="portfolio__grid__item__desc">
 							<h4 class="portfolio__grid__item__desc__title">Diğer Belgeler</h4>
-							<p class="portfolio__grid__item__desc__text">Profesyonel Balıkadam</br>Gemi Adamı</br>SSI Serbest Dalıcı</p>
-							<a class="portfolio__grid__item__desc__link" href="">Devamı <span class="icon-arrow-right3"></span></a>
+							<p class="hidden portfolio__grid__item__desc__text">Profesyonel Balıkadam</br>Gemi Adamı</br>SSI Serbest Dalıcı</p>
+							<a class="portfolio__grid__item__desc__link" href="">Tümü <span class="icon-arrow-right3"></span></a>
 						</div>
 						<div class="portfolio__detail__container">
-							<div class="portfolio__detail__desc">
+							<div class="portfolio__detail__desc">						
+
+								<h4 class="portfolio__detail__desc__heading">SSI</h4>
+								<div class="portfolio__grid">
+									☻ <em>SSI Freediver Level I</em><br>
+									<div class="portfolio__grid__item__img">
+										<img src="images/sertifikalar/SSI-FRD-front.png" alt="SSI Freediver Level I">
+										<img src="images/sertifikalar/SSI-FRD-back.jpg" alt="SSI Freediver Level I">
+									</div>
+									<br />
+									☻ <em>SSI Extended Range Foundations</em><br>
+									<div class="portfolio__grid__item__img">
+										<img src="images/sertifikalar/SSI-XRTF-front.png" alt="SSI Extended Range Foundations">
+										<img src="images/sertifikalar/SSI-XRTF-back.jpg" alt="SSI Extended Range Foundations">
+									</div>
+								</div>
+								<div class="portfolio__grid">
+									☻ <em>SSI Silver 300 Diver</em><br>
+									<div class="portfolio__grid__item__img">
+										<img src="images/sertifikalar/SSI-SIL300D-front.png" alt="SSI Silver 300 Diver">
+										<img src="images/sertifikalar/SSI-SIL300D-back.jpg" alt="SSI Silver 300 Diver">
+									</div>
+									<br />
+									☻ <em>SSI Extended Range Nitrox</em><br>
+									<div class="portfolio__grid__item__img">
+										<img src="images/sertifikalar/SSI-XRAN-front.png" alt="SSI Extended Range Nitrox">
+										<img src="images/sertifikalar/SSI-XRAN-back.jpg" alt="SSI Extended Range Nitrox">
+									</div>
+								</div>
+
+								<hr style="display: inline-block; width: 100%; margin: 80px 0;" />
+
 								<h4 class="portfolio__detail__desc__heading">Diğer Belgeler</h4>
 								<div class="portfolio__grid">
-									☻ <em>Maden Mühendisliği Lisans Diploması</em><br>
-									<div class="portfolio__grid__item__img">
-										<img src="images/sertifikalar/Diploma.png" alt="Üniversite Diploması">
-									</div>
-									<br />
-									☻ <em>Gemi Adamı Cüzdanı</em><br>
-									<div class="portfolio__grid__item__img">
-										<img src="images/sertifikalar/gemiadami.png" alt="Gemi Adamı Cüzdanı">
-									</div>
-									<br />
 									☻ <em>Profesyonel Balıkadam</em><br>
 									<div class="portfolio__grid__item__img">
 										<img src="images/sertifikalar/prof-balikadam.jpg" alt="Profesyonel Balıkadam">
 									</div>
 								</div>
 								<div class="portfolio__grid">
-									☻ <em>SSI Serbest Dalıcı</em><br>
+									☻ <em>Gemi Adamı Cüzdanı</em><br>
 									<div class="portfolio__grid__item__img">
-										<img src="images/sertifikalar/SSI-Freediving-I.png" alt="SSI Level I Freediver">
+										<img src="images/sertifikalar/gemiadami.png" alt="Gemi Adamı Cüzdanı">
 									</div>
 								</div>
-								<!--
-								<h4>
-									☻ <em>B Sınıfı Ehliyet</em><br/>
-								</h4>
-								<p><b>Yakında alacağım diğer belgeler:</b></p>
-								<ol>
-									<li>TSSF 17 Uzmanlığın Eğitmenlikleri</li>
-									<li>Protec Kapalı Devre Eğitmenliği</li>
-									<li>ILS/TSSF Bronz Cankurtaran Eğitmen</li>
-								</ol>
-								-->
+
+								<hr style="display: inline-block; width: 100%; margin: 80px 0;" />
+
+								<h4 class="portfolio__detail__desc__heading">Lisans Diploması</h4>
+								<div class="portfolio__grid">
+									☻ <em>Maden Mühendisliği Lisans Diploması</em><br>
+									<div class="portfolio__grid__item__img">
+										<img src="images/sertifikalar/Diploma.png" alt="Üniversite Diploması">
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
