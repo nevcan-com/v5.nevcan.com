@@ -2993,7 +2993,7 @@ body {
 .portrait {
   position: fixed;
   width: 38%;
-  background: url(/images/rock.jpg) left center;
+  background: url(/assets/images/rock.jpg) left center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4568,4 +4568,23 @@ select#lng {
 .btn-blog:hover {
   background-color: #ff7f00;
   right: -24px;
+}
+.btn-blog2 {
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  right: 30px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 30px;
+  background-color: #02b875;
+  color: #FFF;
+  font-weight: 400;
+  box-shadow: 0px 0px 10px #666;
+}
+.footer-social a {
+  color: #AAA;
+  margin: 10px;
+}
+.footer-social a:hover {
+  color: #333;
 }

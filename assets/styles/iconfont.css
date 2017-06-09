@@ -3,8 +3,8 @@
 ===========================================================*/
 @font-face {
   font-family: 'iconfont';
-  src: url("/font/iconfont.eot");
-  src: url("/font/iconfont.eot?#iefix") format("embedded-opentype"), url("/font/iconfont.woff") format("woff"), url("/font/iconfont.ttf") format("truetype"), url("/font/iconfont.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont.eot");
+  src: url("/assets/fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/iconfont.woff") format("woff"), url("/assets/fonts/iconfont.ttf") format("truetype"), url("/assets/fonts/iconfont.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }

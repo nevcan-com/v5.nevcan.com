@@ -1,0 +1,1 @@
+mapLatitude=40.985747,mapLongitude=29.025306,mapZoom=5;

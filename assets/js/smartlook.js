@@ -1,0 +1,1 @@
+window.smartlook||function(a){var e=smartlook=function(){e.api.push(arguments)},t=a.getElementsByTagName("head")[0],r=a.createElement("script");e.api=new Array,r.async=!0,r.type="text/javascript",r.charset="utf-8",r.src="//rec.smartlook.com/recorder.js",t.appendChild(r)}(document),smartlook("init","e1953c38060a352d1a870fa72d12542b746c765f");
