@@ -3063,7 +3063,7 @@ body {
 .navigation li {
   float: left;
   display: block;
-  width: 33.33%;
+  width: 25%;
   height: 100%;
   padding: 0;
   background: #646464;
@@ -3214,7 +3214,9 @@ body {
 ===========================================================*/
 /* ---------------- Pages  ---------------- */
 .page__about,
-.page__portfolio,
+.page__portfolio-certificates,
+.page__portfolio-courses,
+.page__portfolio-services,
 .page__blog,
 .page__contact {
   padding: 4em 2.5em;
@@ -3250,11 +3252,15 @@ body {
 }*/
 
 /* Reset for the portfolio section */
-.page__portfolio {
+.page__portfolio-certificates,
+.page__portfolio-courses,
+.page__portfolio-services {
   padding: 0;
 }
 
-.page__portfolio .page-heading {
+.page__portfolio-certificates .page-heading,
+.page__portfolio-courses .page-heading,
+.page__portfolio-services .page-heading {
   margin: 0 0 2em 0;
 }
 
@@ -3775,7 +3781,9 @@ body {
 /*===========================================================
   Main Content (Portfolio)
 ===========================================================*/
-.portfolio {
+.portfolio-certificates,
+.portfolio-courses,
+.portfolio-services {
   width: 200%;
   margin-left: -100%;
   -webkit-transition: margin-left 0.75s ease;
@@ -3784,24 +3792,32 @@ body {
   transition: margin-left 0.75s ease;
 }
 
-.portfolio__detail {
+.portfolio__detail-certificates,
+.portfolio__detail-courses,
+.portfolio__detail-services {
   position: relative;
   float: left;
   width: 50%;
   padding: 4em;
 }
-.portfolio__detail img {
+.portfolio__detail-certificates img,
+.portfolio__detail-courses img,
+.portfolio__detail-services img {
   margin: 0 auto;
 }
 
-.portfolio__detail__close {
+.portfolio__detail__close-certificates,
+.portfolio__detail__close-courses,
+.portfolio__detail__close-services {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   background: rgba(0, 0, 0, 0.2);
   font-size: 2em;
 }
-.portfolio__detail__close:hover {
+.portfolio__detail__close-certificates:hover,
+.portfolio__detail__close-courses:hover,
+.portfolio__detail__close-services:hover {
   cursor: pointer;
 }
 
@@ -3843,11 +3859,16 @@ body {
   transition: color 0.35s ease;
 }
 
-.portfolio__detail__container {
+.portfolio__detail__container-certificates,
+.portfolio__detail__container-courses,
+.portfolio__detail__container-services {
   display: none;
 }
 
-.portfolio__grid {
+.portfolio__grid,
+.portfolio__grid-certificates,
+.portfolio__grid-courses,
+.portfolio__grid-services {
   float: left;
   width: 50%;
   padding: 0 3em;
@@ -4035,7 +4056,9 @@ body {
 }
 
 /* ------ Portfolio Active State ------- */
-.portfolio__detail-active .portfolio {
+.portfolio__detail-active-certificates .portfolio-certificates,
+.portfolio__detail-active-courses .portfolio-courses,
+.portfolio__detail-active-services .portfolio-services {
   margin-left: 0;
   -webkit-transition: margin-left 0.75s ease;
   -moz-transition: margin-left 0.75s ease;
@@ -4307,8 +4330,12 @@ body {
 .navigation:after,
 .skill-list-1__bar:after,
 .skill-list-2:after,
-.portfolio:after,
-.portfolio__grid:after,
+.portfolio-certificates:after,
+.portfolio-courses:after,
+.portfolio-services:after,
+.portfolio__grid-certificates:after,
+.portfolio__grid-courses:after,
+.portfolio__grid-services:after,
 #form:after {
   content: '';
   display: block;
@@ -4424,11 +4451,15 @@ label.visuallyhidden-with-placeholder {
   }
 
   /* Portfolio goes full width + reset for page heading */
-  .page__portfolio {
+  .page__portfolio-certificates,
+  .page__portfolio-courses,
+  .page__portfolio-services {
     padding: 4em 0;
   }
 
-  .page__portfolio .page-heading {
+  .page__portfolio-certificates .page-heading,
+  .page__portfolio-courses .page-heading,
+  .page__portfolio-services .page-heading {
     margin: 0 -1em 2em -1em;
   }
 
@@ -4437,9 +4468,9 @@ label.visuallyhidden-with-placeholder {
   }
 
   .portfolio__grid__item {
-    float: none;
-    width: 100%;
-    padding: 1em 0;
+    float: left;
+    width: 50%;
+    padding: 1em;
   }
 
   .portfolio__grid__item__desc {
@@ -4472,15 +4503,21 @@ label.visuallyhidden-with-placeholder {
   }
 
   /* Reorder portfolio spacing */
-  .page__portfolio .page-heading {
+  .page__portfolio-certificates .page-heading,
+  .page__portfolio-courses .page-heading,
+  .page__portfolio-services .page-heading {
     margin: 0 -3em 2em -3em;
   }
 
-  .portfolio__detail {
+  .portfolio__detail-certificates,
+  .portfolio__detail-courses,
+  .portfolio__detail-services {
     padding: 2em 1em;
   }
 
-  .portfolio__grid {
+  .portfolio__grid-certificates,
+  .portfolio__grid-courses,
+  .portfolio__grid-services {
     padding: 0 1em;
   }
 
@@ -4587,4 +4624,28 @@ select#lng {
 }
 .footer-social a:hover {
   color: #333;
+}
+
+.portfolio__detail__desc iframe {
+  margin-left: calc(50% - 280px);
+  margin-top: 4rem;
+}
+
+#course .portfolio__grid__item {
+  width: 25%;
+  padding: .5em;
+  font-size: 100%;
+}
+
+#course .portfolio__grid__item__desc__link {
+  margin: 0.5em 0 0 0;
+  padding: 0 0.5em;
+}
+
+.communicate-tool {
+  width: calc(50% - 10px);
+  margin: 5px;
+  float: left;
+  text-align: center;
+  font-size: 3.5em;
 }
