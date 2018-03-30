@@ -45,6 +45,25 @@
 	</style>
 </head>
 <body>
+	<!-- Facebook App for Messenger -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '387620151665403',
+				xfbml      : true,
+				version    : 'v2.11'
+			});
+			FB.AppEvents.logPageView();
+		};
+	
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<!-- Navigation -->
 	<ul class="navigation">
@@ -162,7 +181,7 @@
 					<p class="es">Hola, este es Nevcan Uludaş.</p>
 					<p class="de">Hallo, dies ist Nevcan Uludaş.</p>
 					<!-- Part 2 -->
-					<p class="tr">Sualtında nefes almaya üniversite yıllarında ('08) okulun sualtı kulübü ile başladım. İlk dalışımın ardından hocam bana kendimi nasıl hissettiğimi sorduğunda ona "<em>Bende eğitmen olacağım</em>" cevabını vermiştim. Gülümsedikten sonra "<em>Önce şu kursu bir tamamlayalım, sonra eğitmen olursun</em>" demişti.</p>
+					<p class="tr">Sualtında nefes almaya üniversite yıllarında ('08) okulun sualtı kulübü ile başladım. İlk dalışımın ardından hocam bana kendimi nasıl hissettiğimi sorduğunda ona "<em>Bende eğitmen olacağım</em>" cevabını vermiştim. Gülümsedikten sonra "<em>Önce şu kursu tamamlayalım, sonra eğitmen olursun</em>" demişti.</p>
 					<p class="en">I started to breathing in underwater on my university years ('08) with the school's diving club. After my first dive, my instructor asked to me how I felt myself and I replied "<em>I will become an instructor too</em>". Then he smiled and said to me "<em>After you complete this course, you can be an instructor too</em>".</p>
 					<p class="ru">I started to breathing in underwater on my university years ('08) with the school's diving club. After my first dive, my instructor asked to me how I felt myself and I replied "<em>I will become an instructor too</em>". Then he smiled and said to me "<em>After you complete this course, you can be an instructor too</em>".</p>
 					<p class="es">I started to breathing in underwater on my university years ('08) with the school's diving club. After my first dive, my instructor asked to me how I felt myself and I replied "<em>I will become an instructor too</em>". Then he smiled and said to me "<em>After you complete this course, you can be an instructor too</em>".</p>
@@ -246,7 +265,7 @@
 						<li style="background-color: lightgoldenrodyellow">
 								<div class="emedu-list-1__date">2017</div>
 								<div class="emedu-list-1__location">
-									<span class="tr">GUE'ye katıldım ☺</span>
+									<span class="tr">GUE üyesi oldum ve<br><a href="http://gueturkey.com" target="_blank" style="color: #464646; border-bottom: 1px dashed;">GUE Turkey</a> topluluğunu kurdum ☺</span>
 									<span class="en">I joined GUE ☺</span>
 								</div>
 						</li>
@@ -289,7 +308,7 @@
 						<li style="background-color: lightgoldenrodyellow">
 								<div class="emedu-list-1__date">2015</div>
 								<div class="emedu-list-1__location">
-									<span class="tr">Kendi dalış okulumu açtım ☺</span>
+									<span class="tr">Neptün Sualtı Merkezi'ni kudum ☺</span>
 									<span class="en">I launched my own diving center ☺</span>
 								</div>
 						</li>
@@ -376,7 +395,7 @@
 						<li style="background-color: lightgoldenrodyellow">
 								<div class="emedu-list-1__date">2008</div>
 								<div class="emedu-list-1__location">
-									<span class="tr">İlk kez dalış yaptım ☺</span>
+									<span class="tr">İlk kez sualtında nefes aldım ☺</span>
 									<span class="en">I dived for the first time ☺</span>
 								</div>
 						</li>
@@ -478,23 +497,23 @@
 									</h4>
 									<p><b>Uzmanlıklarım:</b></p>
 									<ol>
-										<li>Akıntı Dalışı Uzmanlığı</li>
-										<li>Arama Kurtarma Uzmanlığı</li>
-										<li>Batık Dalışı Uzmanlığı</li>
-										<li>Derin Dalış Uzmanlığı</li>
-										<li>Gece Dalışı Uzmanlığı</li>
-										<li>İrtifa Dalışı Uzmanlığı</li>
-										<li>Kovuk Dalışı Uzmanlığı</li>
-										<li>Malzeme Bilgisi ve Bakımı Uzmanlığı</li>
-										<li>Mükemmel Yüzerlilik Uzmanlığı</li>
-										<li>Nitrox Uzmanlığı</li>
-										<li>Oksijen Kullanımı Uzmanlığı</li>
-										<li>Tanıtım Dalışı Uzmanlığı</li>
-										<li>Temel Dalış İlkyardım Uzmanlığı</li>
-										<li>Tüp Doldurma Uzmanlığı</li>
-										<li>Sualtı Fotoğrafçılığı Uzmanlığı</li>
-										<li>Sualtı Videoculuğu Uzmanlığı</li>
-										<li>Yön Bulma Uzmanlığı</li>
+										<li>Akıntı Dalışı Uzmanlığı Eğitmeni</li>
+										<li>Arama Kurtarma Uzmanlığı Eğitmeni</li>
+										<li>Batık Dalışı Uzmanlığı Eğitmeni</li>
+										<li>Derin Dalış Uzmanlığı Eğitmeni</li>
+										<li>Gece Dalışı Uzmanlığı Eğitmeni</li>
+										<li>İrtifa Dalışı Uzmanlığı Eğitmeni</li>
+										<li>Kovuk Dalışı Uzmanlığı Eğitmeni</li>
+										<li>Malzeme Bilgisi ve Bakımı Uzmanlığı Eğitmeni</li>
+										<li>Mükemmel Yüzerlilik Uzmanlığı Eğitmeni</li>
+										<li>Nitrox Uzmanlığı Eğitmeni</li>
+										<li>Oksijen Kullanımı Uzmanlığı Eğitmeni</li>
+										<li>Tanıtım Dalışı Uzmanlığı Eğitmeni</li>
+										<li>Temel Dalış İlkyardım Uzmanlığı Eğitmeni</li>
+										<li>Tüp Doldurma Uzmanlığı Eğitmeni</li>
+										<li>Sualtı Fotoğrafçılığı Uzmanlığı Eğitmeni</li>
+										<li>Sualtı Videoculuğu Uzmanlığı Eğitmeni</li>
+										<li>Yön Bulma Uzmanlığı Eğitmeni</li>
 									</ol>
 									<p>
 										<br/>
@@ -552,9 +571,7 @@
 												☻ <em>Serbest Dalış Eğitmeni</em><br>
 												☻ <em>Uzman Dalıcı Eğitmeni</em><br>
 												☻ <em>Engelli Dalıcı Eğitmeni</em><br>
-												<!-- ☻ <b>Protec Türkiye Ekip Üyesi</b> -->
 											</h4>
-											<!-- <a href="http://protecdive-turkiye.com" target="_blank">www.protecdive-turkiye.com</a> -->
 											<p><b>Uzmanlıklarım:</b></p>
 											<ol>
 												<li>Mağara Keşif/Deneme Dalışı Eğitmeni</li>
@@ -565,10 +582,6 @@
 												<li>Buz Dalışı Uzmanlığı Eğitmeni</li>
 												<li>Batık Dalışı Uzmanlığı Eğitmeni</li>
 												<li>Engelli Dalıcı Eğitmeni (Handicap)</li>
-												<!--
-													<li>Tam Maske Uzmanlığı</li>
-													<li>Solo Dalış Uzmanlığı</li>
-												-->
 											</ol>
 											<p>
 												<br/>
@@ -673,13 +686,6 @@
 										<div class="portfolio__grid__item__img">
 											<img src="assets/images/sertifikalar/stcw.jpg" alt="STCW">
 										</div>
-										<br>
-										<!--
-										☻ <em>DAN</em><br>
-										<div class="portfolio__grid__item__img">
-											<img src="assets/images/sertifikalar/dan.jpg" alt="DAN">
-										</div>
-										-->
 									</div>
 								</div>
 							</div>
@@ -1525,7 +1531,8 @@
 									<h4 class="portfolio__detail__desc__heading">Zero to Hero</h4>
 									
 									<h5>Kurs Ücreti:</h5>
-									<p>Kurs ücreti 1500€'dur.</p>
+									<!-- <p>Kurs ücreti 1500€'dur.</p> -->
+									<p>Kurs ücretini öğrenmek için iletişime geçin.</p>
 									
 									<h5>Kapsam:</h5>
 									<p>Kursun amacı dalış konusunda hiçbir bilgisi olmayan ya da çok az bilgisi ve tecrübesi olan katılımcıların ileri seviye dalış bilgi ve tecrübesine ulaştırmaktır. Kurs sonunda başarılı olanlar aşağıdaki dalıcı belgelerini almaya hak kazanırlar;</p>
@@ -1901,6 +1908,27 @@
 						<span style="color:#000871">☻</span> <a target="_blank" href="http://neptunsualti.com">www.neptunsualti.com</a><br>
 						<span style="color:#000871">☻</span> <a target="_blank" href="http://gueturkey.com">www.gueturkey.com</a>
 					</address>
+					
+					<div class="contact__web" style="height: 6.6em">
+						<!-- <div class="fb-messengermessageus" 
+							messenger_app_id="387620151665403" 
+							page_id="242569772504798"
+							color="blue"
+							size="xlarge"
+							style="margin: 0 auto; width: 100%; text-align: center;">
+						</div> -->
+						<div class="communicate-tool">
+							<a href="https://www.messenger.com/t/daliskursu" target="_blank" title="Facebook Messenger">
+								<i class="fa fa-commenting"></i>
+							</a>
+						</div>
+						<div class="communicate-tool">
+							<a href="https://api.whatsapp.com/send?phone=905555435144&text=Dalış%20kursları%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" title="Whatsapp">
+								<i class="fa fa-whatsapp"></i>
+							</a>
+						</div>
+					</div>
+
 					<div class="contact__web">
 						<!--
 						<span class="icon-earth"></span>
@@ -2012,6 +2040,22 @@
 		ga('create', 'UA-39574881-1', 'nevcan.com');
 		ga('send', 'pageview');
 	</script>
+
+	<!-- Start of StatCounter Code for Default Guide -->
+	<script type="text/javascript">
+		var sc_project=11656824; 
+		var sc_invisible=1; 
+		var sc_security="4bd0e34f"; 
+		</script>
+		<script type="text/javascript"
+		src="https://www.statcounter.com/counter/counter.js"
+		async></script>
+		<noscript><div class="statcounter"><a title="Web Analytics"
+		href="http://statcounter.com/" target="_blank"><img
+		class="statcounter"
+		src="//c.statcounter.com/11656824/0/4bd0e34f/1/" alt="Web
+		Analytics"></a></div></noscript>
+	<!-- End of StatCounter Code for Default Guide -->
 
 </body>
 </html>
