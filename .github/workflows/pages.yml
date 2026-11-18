@@ -1,0 +1,64 @@
+# Publishes v5.nevcan.com: the Vue site at the root and every static tag (2016.01, 2017.06, ...)
+# in a folder named after the tag. scripts/archive.mjs then hides it all from search engines.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+    tags: ['20*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # Node 14 has no build for newer runner images; webpack 3 and node-sass 5 need it.
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0 # the static versions are read from their tags
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 14
+      - name: Install
+        run: npm ci --no-audit --no-fund
+        env:
+          CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
+      - name: Build the Vue site
+        run: npm run build
+      - name: Add the static versions
+        run: |
+          for tag in $(git tag -l '20*'); do
+            git cat-file -e "$tag:package.json" 2>/dev/null && continue # a Vue tag, served at the root
+            mkdir -p "dist/$tag"
+            git archive "$tag" | tar -x -C "dist/$tag"
+            # Later fixes for a version (e.g. a recovered image) live in fixes/<tag>/ on main.
+            if [ -d "fixes/$tag" ]; then cp -R "fixes/$tag/." "dist/$tag/"; fi
+            echo "added /$tag/"
+          done
+      - name: Route deep links to the Vue app
+        run: cp dist/index.html dist/404.html
+      - name: Make it an archive
+        run: node scripts/archive.mjs dist
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
